@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <input type="number" id="L1"><br>
+        <input type="number" id="L2"><br>
+dodawanie  <input type="radio" name="dzialanie" value="dodawanie"><br>
+Odejmowanie<input type="radio" name="dzialanie" value="odejmowanie"><br>
+Mnożenie          <input type="radio" name="dzialanie" value="mnozenie"><br>
+Dzielenie           <input type="radio" name="dzialanie" value="dzielenie"><br>
+    <button onclick="policz()">Policz</button><br>
+      Wynik <input type="number" id="wynik" disabled>  
+    <script>   
+        function policz() {
+        
+    var L1 = document.getElementById('L1').value;
+    L1 = parseInt(L1);
+    var L2 = document.getElementById('L2').value;
+    L2 = parseInt(L2);
+ var dzialanie = document.querySelector('input[name="dzialanie"]:checked').value;;
+   var wynik =0;
+   console.log(dzialanie);
+    if(dzialanie == "dodawanie")
+    {
+    
+        wynik = L1+L2;
+       
+       document.getElementById('wynik').value = wynik
+    
+    }
+    else if(dzialanie == "odejmowanie")
+    {
+    
+       wynik = L1-L2;
+       
+       document.getElementById('wynik').value = wynik
+    }
+    else if(dzialanie == "mnozenie")
+    {
+    
+       wynik = L1*L2;
+       
+       document.getElementById('wynik').value = wynik
+    }
+    else if(dzialanie == "dzielenie")
+    {
+    
+       wynik = L1/L2;
+       
+       document.getElementById('wynik').value = wynik
+    }
+    } 
+      
+      </script>
+
+</body>
+</html>
